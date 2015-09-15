@@ -1,28 +1,56 @@
 void setup()
 {
+	size(500,500);
 	noLoop();
+	Die a = new Die();
 }
 void draw()
 {
-	//your code here
+	a.roll();
+	a.show();
 }
 void mousePressed()
 {
 	redraw();
 }
-class Die //models one single dice cube
+class Die 
 {
-	//variable declarations here
-	Die(int x, int y) //constructor
+	Die(int x, int y) 
 	{
-		//variable initializations here
+		
 	}
 	void roll()
 	{
-		//your code here
+		int number=((int)(Math.random()*6)+1);
+
 	}
 	void show()
 	{
-		//your code here
+		if (number=1)
+		{
+			rect(x,y,36,36);
+			ellipse(x+18,y+18,2,2)
+		}
+		else if (number=2)
+		{
+			rect(x,y,36,36);
+			ellipse(x+12,)
+		}
+		else if (number=3)
+		{
+			rect(x,y,36,36);
+		}
+		else if (number=4)
+		{
+			rect(x,y,36,36);
+		}
+		else if (number=5)
+		{
+			rect(x,y,36,36);
+		}
+		else 
+		{
+			rect(x,y,36,36);
+		}
 	}
 }
