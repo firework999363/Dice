@@ -1,13 +1,15 @@
+int colors = 255;
 void setup()
 {
 	size(500,500);
 	noLoop();
-	Die a = new Die();
+	
 }
 void draw()
 {
-	a.roll();
-	a.show();
+	Die bob = new Die(0,0);
+	bob.roll();
+	bob.show();
 }
 void mousePressed()
 {
@@ -15,42 +17,76 @@ void mousePressed()
 }
 class Die 
 {
+	int number, myX, myY;
 	Die(int x, int y) 
 	{
-		
+		number=((int)(Math.random()*6)+1);
+		myX=x;
+		myY=y;
 	}
 	void roll()
 	{
-		int number=((int)(Math.random()*6)+1);
+		
 
 	}
 	void show()
 	{
-		if (number=1)
+		if (number==1)
 		{
-			rect(x,y,36,36);
-			ellipse(x+18,y+18,2,2)
+			fill(colors);
+			rect(myX,myY,36,36);
+			fill(0);
+			ellipse(myX+18,myY+18,2,2);
 		}
-		else if (number=2)
+		else if (number==2)
 		{
-			rect(x,y,36,36);
-			ellipse(x+12,)
+			fill(colors);
+			rect(myX,myY,36,36);
+			fill(0);
+			ellipse(myX+12,myY+18,2,2);
+			ellipse(myX+24,myY+18,2,2);
 		}
-		else if (number=3)
+		else if (number==3)
 		{
-			rect(x,y,36,36);
+			fill(colors);
+			rect(myX,myY,36,36);
+			fill(0);
+			ellipse(myX+9,myY+9,2,2);
+			ellipse(myX+18, myY+18, 2, 2);
+			ellipse(myX+27, myY+27, 2, 2);
 		}
-		else if (number=4)
+		else if (number==4)
 		{
-			rect(x,y,36,36);
+			fill(colors);
+			rect(myX,myY,36,36);
+			fill(0);
+			ellipse(myX+12,myY+12,2,2);
+			ellipse(myX+24,myY+12,2,2);
+			ellipse(myX+12,myY+24,2,2);
+			ellipse(myX+24,myY+24,2,2);
 		}
-		else if (number=5)
+		else if (number==5)
 		{
-			rect(x,y,36,36);
+			fill(colors);
+			rect(myX,myY,36,36);
+			fill(0);
+			ellipse(myX+9,myY+9,2,2);
+			ellipse(myX+9,myY+27,2,2);
+			ellipse(myX+18,myY+18,s,s);
+			ellipse(myX+27,myY+9,s,s);
+			ellipse(myX+27,myY+27,s,s);
 		}
 		else 
 		{
-			rect(x,y,36,36);
+			fill(colors);
+			rect(myX,myY,36,36);
+			fill(0);
+			ellipse(myX+12,myY+9,s,s);
+			ellipse(myX+12,myY+18,s,s);
+			ellipse(myX+12,myY+27,s,s);
+			ellipse(myX+24,myY+9,s,s);
+			ellipse(myX+24,myY+18,s,s);
+			ellipse(myX+24,myY+27,s,s);
 		}
 	}
 }
